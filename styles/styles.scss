@@ -6,8 +6,10 @@
 }
 
 :root { // variables
-    --color-primary: #191d2b;
-    --color-secondary: #27ae60;
+    --color-primary: #191d2b; //accessible with tertiary and white color font
+    --color-secondary: #A36476; //accessible with white font 
+    --color-tertiary: #F0AABE; //accessible with primary color font
+    --color-quad: #53A35D;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -19,6 +21,7 @@
     --color-grey6: #12181b;
     --br-sm-2: 14px;
     --box-shadow1: 0 3px 15px rgba(0,0,0 .20);
+    --transition: all .4s ease-in-out;
 
 }
 
@@ -27,8 +30,8 @@ body {
     background-color: var(--color-primary);
     font-family: 'Lato', sans-serif;
     font-size: 1.1rem;
-    color: var(--color-white);
-    transition: all .4s ease-in-out;
+    color: var(--color-white); //accessible
+    transition: var(--transition);
 }
 
 a {
@@ -57,31 +60,26 @@ section {
 .sec1 {
     display: none;
     transform: translateY(0) scale (1);
-    background-color: hotpink;
 }
 
 .sec2 {
     display: none;
     transform: translateY(0) scale (1); 
-    background-color: slateblue;
 }
 
 .sec3 {
     display: none;
     transform: translateY(0) scale (1);
-    background-color: pink;
 }
 
 .sec4 {
     display: none;
     transform: translateY(0) scale (1);
-    background-color: lavender;
 }
 
 .sec5 {
     display: none;
     transform: translateY(0) scale (1);
-    background-color: purple;
 }
 
 .active {
@@ -128,9 +126,110 @@ section {
     }
     .active-btn {
         background-color: var(--color-secondary) !important;
-        transition: all .4s ease-in-out;
+        transition: var(--transition);
         i { //icon
             color: var(--color-white) !important;
+        }
+    }
+}
+
+//header content
+.header-content {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); //two columns
+    height:100%;
+    .left-side{ //image
+        display: flex;
+        align-items: center;
+        position: relative;
+        .header-shape {
+            transition: var(transition);
+            width: 65%;
+            height:100%;
+            background-color: var(--color-tertiary);
+            position: absolute;
+            left: 0;
+            top: 0; //keep at top left
+            z-index: -1;
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); //using clip path generator 'clippy'
+
+        }
+        .image {
+            border-radius: var(--br-sm-2);
+            width: 68%;
+            height: 90%;
+            margin-left: 4rem;
+            margin-top: 2rem;
+            transition: var(--transition);
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition);
+                clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); //using clip path generator 'clippy'
+            }
+        }
+    }
+    .right-side{ //name and paragraph
+        display: flex;
+        flex-direction: column; //display in another column
+        justify-content: center;
+        padding-right: 18rem;
+        .name{
+            font-size: 3rem;
+            span{
+                color: var(--color-tertiary); //highlight just the name
+            }
+        }
+        p{
+            margin: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+}
+
+.btn-container {
+    display: flex;
+    align-self: flex-start;
+}
+
+.main-btn {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--color-secondary);
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .btn-text {
+        padding: 0 2rem; //padding on left and right
+    }
+    .btn-icon {
+        background-color: var(--color-secondary);
+        display: flex; //center with flex
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; //circle
+        padding: 1rem;
+    }
+    &::before { //animate button
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: var(--transition);
+        z-index: -1;
+    }
+    &:hover { //when you hover bring in the color
+        &::before {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            transform: translateX(0);
         }
     }
 }

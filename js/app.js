@@ -1,3 +1,7 @@
+/* Hannah Tobiason Portfolio
+8/31/2022
+*/
+
 const sections = document.querySelectorAll('.section'); //sections
 const sectBtns = document.querySelectorAll('.controls'); //all buttons (parent)
 const sectBtn = document.querySelectorAll('.control'); //each individual button
@@ -9,7 +13,7 @@ function PageTransitions() {
     //switch active class from one button to the next
     for(let i = 0; i < sectBtn.length; i++){ //loop through buttons
         sectBtn[i].addEventListener('click', function() {
-            let curBtn = document.querySelectorAll('.active-btn'); //grab the current active button
+            let curBtn = $('.active-btn'); //grab the current active button
             curBtn[0].className = curBtn[0].className.replace('active-btn', ' '); //remove active class
             this.className += ' active-btn'; //add active class to button clicked
         });
@@ -18,7 +22,6 @@ function PageTransitions() {
     //sections active class
     allSections.addEventListener('click', (e) => {
         const btnid = e.target.dataset.id; //target the data for the specific button
-        console.log(btnid);
         if(btnid) {
             //remove active from other buttons
             sectBtn.forEach((btn) => {
