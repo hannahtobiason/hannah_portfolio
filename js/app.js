@@ -7,7 +7,6 @@ const sectBtns = document.querySelectorAll('.controls'); //all buttons (parent)
 const sectBtn = document.querySelectorAll('.control'); //each individual button
 const allSections = document.querySelector('.main-content'); //the body
 
-
 function PageTransitions() {
 
     //switch active class from one button to the next

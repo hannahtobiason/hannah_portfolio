@@ -335,6 +335,103 @@ section {
     padding-top: 3.5rem;
     .left-contact {
         flex: 2;
+        h4 {
+            margin-top: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        // p {
+        //     margin: 1rem 0;
+        //     line-height: 2rem;
+        // }
+
+        .contact-info{
+            .contact-item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    margin: .3rem 0 !important; //override existing margin;
+                    padding: 0 !important;
+                }
+                .icon {
+                    display: grid;
+                    grid-template-columns: 40px 1fr; //for icon and word to align words
+                    i {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+        }
+
+        .social-icons { //for social icons
+            display: flex;
+            margin-top: .2rem;
+            a {
+                display: flex;
+                align-items: center;
+                color: var(--color-white);
+                background-color: var(--color-grey5);
+                cursor: pointer; //give a clickable cursor
+                justify-content: center;
+                border-radius: 50%; //circle
+                width: 50px; //circle
+                height: 50px;
+                margin: 0 .4rem;
+                transition: var(--transition);
+                &:hover { // animation on hover
+                    background-color: var(--color-secondary);
+                    i {
+                        color: var(--color-primary);
+                    }
+                }
+                i {
+                    display: flex;
+                    align-items: center; //center
+                    justify-content: center;
+                    font-size: 1.2rem;
+
+                }
+            }
+
+        }
+    }
+
+    .right-contact {
+        flex: 3;
+        margin-left: 3rem;
+        .input-control { //format the groups of inputs
+            margin: 1.5rem 0;
+            input, textarea{ 
+                border-radius: 30px;
+                font-weight: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                padding: .8rem 1.1rem;
+                outline: none;
+                border: none;
+                color: var(--color-white);
+                background-color: var(--color-grey5);
+                width: 100%;
+                resize: none;
+
+            }
+        }
+        .i-c-2 { //format the email and name
+            display: flex;
+            :last-child {
+                margin-left: 1.5rem; //put email to the right
+            }
+        }
+        .submit-btn {
+            display: flex;
+            justify-content: flex-start;
+        }
+
     }
 }
 
