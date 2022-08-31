@@ -334,7 +334,7 @@ section {
     display: flex; //everything next to each other
     padding-top: 3.5rem;
     .left-contact {
-        flex: 2;
+        flex: 1;
         h4 {
             margin-top: 1rem;
             font-size: 2rem;
@@ -352,7 +352,7 @@ section {
                 align-items: center;
                 justify-content: space-between;
                 p {
-                    margin: .3rem 0 !important; //override existing margin;
+                    margin: .3rem !important; //override existing margin;
                     padding: 0 !important;
                 }
                 .icon {
@@ -401,38 +401,38 @@ section {
         }
     }
 
-    .right-contact {
-        flex: 3;
-        margin-left: 3rem;
-        .input-control { //format the groups of inputs
-            margin: 1.5rem 0;
-            input, textarea{ 
-                border-radius: 30px;
-                font-weight: inherit;
-                font-size: inherit;
-                font-family: inherit;
-                padding: .8rem 1.1rem;
-                outline: none;
-                border: none;
-                color: var(--color-white);
-                background-color: var(--color-grey5);
-                width: 100%;
-                resize: none;
+    // .right-contact {
+    //     flex: 3;
+    //     margin-left: 3rem;
+    //     .input-control { //format the groups of inputs
+    //         margin: 1.5rem 0;
+    //         input, textarea{ 
+    //             border-radius: 30px;
+    //             font-weight: inherit;
+    //             font-size: inherit;
+    //             font-family: inherit;
+    //             padding: .8rem 1.1rem;
+    //             outline: none;
+    //             border: none;
+    //             color: var(--color-white);
+    //             background-color: var(--color-grey5);
+    //             width: 100%;
+    //             resize: none;
 
-            }
-        }
-        .i-c-2 { //format the email and name
-            display: flex;
-            :last-child {
-                margin-left: 1.5rem; //put email to the right
-            }
-        }
-        .submit-btn {
-            display: flex;
-            justify-content: flex-start;
-        }
+    //         }
+    //     }
+    //     .i-c-2 { //format the email and name
+    //         display: flex;
+    //         :last-child {
+    //             margin-left: 1.5rem; //put email to the right
+    //         }
+    //     }
+    //     .submit-btn {
+    //         display: flex;
+    //         justify-content: flex-start;
+    //     }
 
-    }
+    // }
 }
 
 
