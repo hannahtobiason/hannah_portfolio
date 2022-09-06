@@ -248,6 +248,38 @@ section {
     }
 }
 
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding-bottom: 4rem;
+    .skill-item {
+        position: relative;
+        padding-left: 3rem;
+        .skill-icon {
+            position: absolute;
+            left: -30px;
+            top: 0;
+            background-color: var(--color-secondary); //circle 
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; //circle ^^
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                font-size: 1.3rem;
+            }
+        }
+        h5 {
+            padding: 1rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+    }
+}
+
 /*Timeline*/
 .timeline {
     display: grid;

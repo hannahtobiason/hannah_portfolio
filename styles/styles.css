@@ -253,6 +253,37 @@ section {
   text-transform: uppercase;
 }
 
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 4rem;
+}
+.skills .skill-item {
+  position: relative;
+  padding-left: 3rem;
+}
+.skills .skill-item .skill-icon {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background-color: var(--color-secondary);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill-item .skill-icon i {
+  font-size: 1.3rem;
+}
+.skills .skill-item h5 {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 /*Timeline*/
 .timeline {
   display: grid;
