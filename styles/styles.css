@@ -53,7 +53,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 8rem;
 }
 
 .sec1 {
@@ -361,6 +361,9 @@ section {
   margin-bottom: 0.1rem !important;
   color: var(--color-white);
 }
+.portfolios h4 span {
+  color: var(--color-tertiary);
+}
 .portfolios p {
   color: var(--color-white);
   margin-top: 1rem;
@@ -447,7 +450,7 @@ section {
 /*Contact Section */
 .contact-content-con {
   display: flex;
-  padding-top: 3.5rem;
+  padding: 3.5rem 8rem;
 }
 .contact-content-con .left-contact {
   flex: 1;
@@ -474,6 +477,7 @@ section {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  color: var(--color-secondary);
 }
 .contact-content-con .left-contact .social-icons {
   display: flex;
@@ -489,7 +493,7 @@ section {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin: 0 0.4rem;
+  margin-right: 0.8rem;
   transition: var(--transition);
 }
 .contact-content-con .left-contact .social-icons a:hover {
