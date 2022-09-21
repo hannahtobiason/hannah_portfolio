@@ -601,6 +601,36 @@ section {
   transform: translateX(0);
 }
 
+.social-icon {
+  display: flex;
+}
+.social-icon a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey5);
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 0.8rem;
+  transition: var(--transition);
+}
+.social-icon a:hover {
+  background-color: var(--color-secondary);
+}
+.social-icon a:hover i {
+  color: var(--color-primary);
+}
+.social-icon a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
 .main-title {
   text-align: center;
 }
